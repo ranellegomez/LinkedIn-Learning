@@ -3,18 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-    let firstValue: string = 'Ranelle';
-    let y: number[] = [2, 3, 56];
-    let z: Array<string> = ['a', 'b', 'c']
+    // tuples are arrays that can take multiple types.
+    let myTuple: [string, number] = ['Ranelle', 56];
 
     return (
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo"/>
                 <p>
-                    The value {firstValue} is of {typeof firstValue} type!
-                    The value {y} is of {typeof y} type!
-                    The value {z} is of {typeof z} type!
+                    The value {myTuple[0]} is of {typeof myTuple[0]} type!
+                    The value {myTuple[1]} is of {typeof myTuple[1]} type!
                 </p>
             </header>
         </div>
