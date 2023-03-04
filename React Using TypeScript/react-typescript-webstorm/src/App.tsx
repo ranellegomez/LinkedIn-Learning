@@ -5,6 +5,14 @@ import './App.css';
 function App() {
     // tuples are arrays that can take multiple types.
     let myTuple: [string, number] = ['Ranelle', 56];
+    // enums: maps attribute names to numbers.
+    enum Codes {first, second, third};
+    // any. Use when you're not sure what type will be.
+    let firstName: any = 'Ranelle';
+    // void. use, for example, when you need to void the return type of function.
+    const warning = (): void => {
+        console.log("Warning")
+    }
 
     return (
         <div className="App">
