@@ -3,24 +3,20 @@ import logo from './logo.svg';
 import './App.css';
 import Message from './Message';
 
-class App extends Component<any> {
-    // Runs before component is mounted.
-    componentWillMount() {
-        console.log('Almost there...')
+const initialState = {
+    name: 'Ranelle',
+    message: 'TypeScript is amazing.'
+}
+type State = Readonly<typeof initialState>;
 
-    }
-
-    // Runs after component mounts.
-    componentDidMount() {
-        console.log('Done.')
-    }
-
+class App extends Component<any, State> {
+    readonly state: State = initialState;
     render() {
         return (
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
-                    <Message name = 'Ranelle ' message = 'this is a simple message.'/>
+                    <Message name = {this.state.name} message = {this.state.message}/>
                 </header>
             </div>
         );
