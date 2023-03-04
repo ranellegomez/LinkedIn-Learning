@@ -5,7 +5,7 @@ import Message from './Message';
 
 class App extends Component<any> {
     // Runs before component is mounted.
-    UNSAFE_componentWillUpdate() {
+    componentWillMount() {
         console.log('Almost there...')
 
     }
