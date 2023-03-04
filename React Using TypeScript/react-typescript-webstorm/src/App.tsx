@@ -20,7 +20,7 @@ class App extends Component<any> {
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
-                    <Message message='This is a simple message'/>
+                    <Message name = 'Ranelle ' message = 'this is a simple message.'/>
                 </header>
             </div>
         );

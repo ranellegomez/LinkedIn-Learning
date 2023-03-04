@@ -1,11 +1,16 @@
 import React from 'react';
 
+interface UserMessage {
+    name: string,
+    message: string;
+}
+
 // functional (or stateless) component
 // Adding a prop to expect message as a string and a return type of any (since we are returning HTML). Omitting defaults
 // to any.
-const Message = (prop: {message: string}) : any => {
+const Message = (props: UserMessage) : any => {
     return (
-        <p>{prop.message}</p>
+        <p>{props.name}, {props.message}</p>
     );
 }
 
